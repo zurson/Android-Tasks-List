@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--SEARCH-->
+    <dimen name="main_search_view_text_size">40sp</dimen>
+    <dimen name="main_search_view_icon_size">55dp</dimen>
+
+    <!--FLOATING ACTION BUTTON-->
+    <dimen name="floating_action_button_size">100dp</dimen>
+
+    <!--TASK MANAGER INPUT FIELDS-->
+    <dimen name="task_manager_hint_text_size">30sp</dimen>
+    <dimen name="task_manager_text_size">40sp</dimen>
+
+    <!--TASK MANAGER LIST-->
+    <dimen name="task_manager_list_item_text_size">40sp</dimen>
+    <dimen name="task_manager_list_height">400dp</dimen>
+
+    <!--TASK MANAGER NOTIFICATIONS CHECKBOX-->
+    <dimen name="task_manager_notifications_checkbox_size">56dp</dimen>
+
+    <!--SINGLE TASK-->
+    <dimen name="task_height">250dp</dimen>
+    <dimen name="task_title_text_size">45sp</dimen>
+    <dimen name="task_end_date_max_text_size">35sp</dimen>
+
+    <!--FILTERS-->
+    <dimen name="filters_switch_text_size">40sp</dimen>
+    <dimen name="filter_icon_size">58dp</dimen>
+
+    <!--DELETE ICON-->
+    <dimen name="task_delete_icon_size">82dp</dimen>
+
+    <!--ATTACHMENTS-->
+    <dimen name="attachment_filename_size">24sp</dimen>
+    <dimen name="attachment_height">78dp</dimen>
+    <dimen name="attachment_delete_icon_size">64dp</dimen>
+
+</resources>

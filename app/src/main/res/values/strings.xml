@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Tasks-List</string>
+    <string name="fab_description">Adds new task to the list</string>
+    <string name="task_manager_categories_hint">Category</string>
+    <string name="task_manager_categories_description">Categories list</string>
+    <string name="task_manager_description_hint">Description</string>
+    <string name="task_manager_title_hint">Title</string>
+    <string name="task_manager_select_date_button_text">Select date</string>
+    <string name="task_manager_notifications_checkbox_text">Notifications</string>
+    <string name="task_manager_start_date_label">Start date</string>
+    <string name="task_manager_end_date_label">End date</string>
+    <string name="open_filter_settings_description">Open filter settings</string>
+</resources>

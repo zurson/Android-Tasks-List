@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="task_card_views_ids">
+        <item>@id/status_textview</item>
+        <item>@id/category_textview</item>
+    </array>
+
+</resources>

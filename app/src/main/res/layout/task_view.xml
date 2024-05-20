@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/task"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/task_height"
+    android:layout_margin="5dp"
+    android:layout_marginHorizontal="5dp"
+    android:background="@drawable/shape_task"
+    android:clickable="true"
+    android:foreground="?android:selectableItemBackground"
+    android:padding="5dp">
+
+    <!--GUIDE LINES-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+
+    <!--STATUS-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/status_cardview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="@color/green"
+        app:cardCornerRadius="20dp"
+
+        app:layout_constraintBottom_toTopOf="@id/guideline_1"
+        app:layout_constraintEnd_toStartOf="@id/category_cardview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.example.tasks_list.Utilities.SizeAwareTextView
+            android:id="@+id/status_textview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="5dp"
+            android:autoSizeMinTextSize="1sp"
+            android:autoSizeMaxTextSize="100sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="Completed"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:text_group="@array/task_card_views_ids" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!--CATEGORY-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/category_cardview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        app:cardBackgroundColor="@color/category_cardview_bg_color"
+        app:cardCornerRadius="20dp"
+
+        app:layout_constraintBottom_toTopOf="@id/guideline_1"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vertical_1"
+        app:layout_constraintStart_toEndOf="@id/status_cardview"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.example.tasks_list.Utilities.SizeAwareTextView
+            android:id="@+id/category_textview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="5dp"
+            android:autoSizeMinTextSize="1sp"
+            android:autoSizeMaxTextSize="100sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="Health"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:text_group="@array/task_card_views_ids" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!--TITLE-->
+    <TextView
+        android:id="@+id/title_textview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:ellipsize="end"
+        android:gravity="center|start"
+        android:maxLines="2"
+        android:text="Motorcycle ride with friend"
+        android:textColor="@color/black"
+        android:textSize="@dimen/task_title_text_size"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@id/guideline_2"
+        app:layout_constraintEnd_toStartOf="@id/arrow_imageview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_1" />
+
+
+    <!--BOTTOM LINEAR LAYOUT-->
+    <LinearLayout
+        android:id="@+id/end_date_liner_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline_vertical_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline_2">
+
+
+        <!--CLOCK IMAGE-->
+        <ImageView
+            android:id="@+id/clock_imageview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_clock" />
+
+
+        <!--END DATE-->
+        <TextView
+            android:id="@+id/end_date_textview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="9"
+            android:autoSizeMaxTextSize="@dimen/task_end_date_max_text_size"
+            android:autoSizeTextType="uniform"
+            android:gravity="center|start"
+            android:maxLines="1"
+            android:text="Jul 20, 2023\t\t\t9:00 AM"
+            android:textColor="@color/date_and_category_text_color" />
+
+
+        <!--NOTIFICATIONS ICON-->
+        <ImageView
+            android:id="@+id/notifications_imageview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_notifications_off" />
+
+
+        <!--ATTACHMENTS ICON-->
+        <ImageView
+            android:id="@+id/attachments_imageview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_attachment"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+
+    <!--    &lt;!&ndash;ICONS LINEAR LAYOUT&ndash;&gt;-->
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/icons_liner_layout"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:gravity="center"-->
+    <!--        android:orientation="horizontal"-->
+
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toStartOf="@id/arrow_imageview"-->
+    <!--        app:layout_constraintStart_toEndOf="@id/guideline_vertical"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/guideline_2">-->
+    <!--        -->
+
+    <!--    </LinearLayout>-->
+
+
+    <!--CLICKABLE SYMBOL-->
+    <ImageView
+        android:id="@+id/arrow_imageview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical|end"
+        android:src="@mipmap/ic_task_details"
+        android:visibility="visible"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical_2"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,143 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:outlineAmbientShadowColor="@color/white"
+        android:outlineSpotShadowColor="@color/white"
+        app:layout_constraintGuide_percent="0.80" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:outlineAmbientShadowColor="@color/white"
+        android:outlineSpotShadowColor="@color/white"
+        app:layout_constraintGuide_percent="0.20" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:outlineAmbientShadowColor="@color/white"
+        android:outlineSpotShadowColor="@color/white"
+        app:layout_constraintGuide_percent="0.80" />
+
+
+    <TextView
+        android:id="@+id/main_label_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="Filters"
+        android:textColor="@color/purple"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/hide_completed_linear_layout"
+        style="@style/filter_linear_layout_style"
+        android:orientation="horizontal"
+
+        app:layout_constraintEnd_toStartOf="@id/filter_by_category_linear_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_label_textview">
+
+        <TextView
+            android:id="@+id/hide_completed_textview"
+            style="@style/filter_text_view_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Hide completed" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/hide_completed_switch"
+            style="@style/filter_switch_style"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/filter_by_category_linear_layout"
+        style="@style/filter_linear_layout_style"
+        android:orientation="horizontal"
+
+        app:layout_constraintStart_toEndOf="@id/hide_completed_linear_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_label_textview"
+        >
+
+        <TextView
+            android:id="@+id/filter_by_category_textview"
+            style="@style/filter_text_view_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Filter by category" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/filter_by_category_switch"
+            style="@style/filter_switch_style"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+    <Spinner
+        android:id="@+id/filter_categories_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_categories_filter_spinner"
+        android:padding="5dp"
+        android:popupBackground="@color/dropdown_background_color"
+
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/filter_by_category_linear_layout" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/filter_save_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginVertical="5dp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/shape_button"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@color/buttons_color"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/guideline_bottom"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="max_title_len">50</integer>
+    <integer name="max_title_len_minus_one">49</integer>
+
+    <integer name="max_description_len">500</integer>
+    <integer name="max_description_len_minus_one">499</integer>
+
+</resources>

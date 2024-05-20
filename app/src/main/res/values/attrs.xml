@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SizeAwareTextView">
+        <attr name="text_group" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="SizeAwareImageView">
+        <attr name="img_group" format="reference"/>
+    </declare-styleable>
+
+</resources>
